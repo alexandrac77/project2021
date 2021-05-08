@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button href="/home" color="success">
+    <ion-icon name="home-outline" color="warning"></ion-icon>
+  </ion-button>
+
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked" color="dark">Username</ion-label>
+          <ion-input [(ngModel)]="login.username" name="username" type="text" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" color="dark">Password</ion-label>
+          <ion-input [(ngModel)]="login.password" name="password" type="password" required>
+          </ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="userLogin()" type="submit" expand="block" fill="outline" color="success">Login</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="guestLogin()" expand="block" fill="outline" color="success">Login as Guest</ion-button>
+        </ion-col>
+      </ion-row>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cactus</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button href="/home" color="success">
+    <ion-icon name="home-outline" color="warning"></ion-icon>
+  </ion-button>
+<ion-card *ngFor ="let weather of weatherData">
+  <ion-card-header>weather in Galway</ion-card-header>
+  <!-- <ion-card-content>-->
+    <ion-card-title>{{weather[0].main}}, {{weather[0].description}}</ion-card-title>
+  <!--</ion-card-content> -->
+  
+</ion-card>
+
+</ion-content>

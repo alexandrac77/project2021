@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'aloevera',
+    loadChildren: () => import('./aloevera/aloevera.module').then( m => m.AloeveraPageModule)
+  },
+  {
+    path: 'cactus',
+    loadChildren: () => import('./cactus/cactus.module').then( m => m.CactusPageModule)
+  },
+  {
+    path: 'jade',
+    loadChildren: () => import('./jade/jade.module').then( m => m.JadePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
