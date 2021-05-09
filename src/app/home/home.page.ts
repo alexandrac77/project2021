@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-//import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-home',
@@ -8,20 +9,20 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+  moneyTree: string;
     
-  constructor(private navCtrl: NavController) {}
+  constructor(private navCtrl: NavController, private storage: Storage) {}
    goToPage(){
      this.navCtrl.navigateForward(['cactus']);
    }
-  ngOnInit(){
 
+   ngOnInit(){
+    this.storage.get("money")
+    .then((data) => {
+      this.moneyTree = data;
+
+  })
+  .catch ();
   }
+  
 }
-
-/*
- constructor(private router: Router) {}
-   goToPage(){
-     this.router.navigate(['cactus']);
-   }
-   */

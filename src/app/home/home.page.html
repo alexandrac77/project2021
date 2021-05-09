@@ -1,13 +1,16 @@
 
  <ion-header> 
-  <ion-toolbar>
-    <ion-title>succulents</ion-title>
+  <ion-toolbar color="dark">
+    <ion-title color="success" size="large"> Indoor <ion-icon name="flower-outline"></ion-icon> Gardening</ion-title>
   </ion-toolbar>
  </ion-header>
-<ion-content>
 
-  <ion-button href="/login" expand="full" fill="outline">Login Here</ion-button>
-  <ion-card>
+
+<ion-content color="dark">
+
+  <ion-button color="medium" href="/login" expand="full" fill="outline">Login Here</ion-button>
+  
+  <ion-card color="light">
     <ion-card-header>
       <img src="https://image.freepik.com/free-vector/kawaii-cactus-icon_24911-45293.jpg"/>
       <ion-card-subtitle>Aloe Vera</ion-card-subtitle>
@@ -15,11 +18,11 @@
     </ion-card-header>
   
     <ion-card-content>
-      <ion-button href="/aloevera">click to learn more</ion-button>
+      <ion-button color="dark" href="/aloevera">click to learn more</ion-button>
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card color="light">
     <ion-card-header>
       <img src="https://image.freepik.com/free-vector/kawaii-cactus-icon_24911-45314.jpg"/>
       <ion-card-subtitle>Jade Plant</ion-card-subtitle>
@@ -27,19 +30,26 @@
     </ion-card-header>
   
     <ion-card-content>
-      <ion-button href="/jade">click to learn more</ion-button>
+      <ion-button color="dark" href="/jade">click to learn more</ion-button>
+      <br>
+      <ion-label color="warning">Lucky Chance</ion-label>
+      <ion-chip color="warning" [routerLink]="['/jade']">
+        <ion-icon name="star" color="warning"></ion-icon>
+        <ion-label>claim gift {{moneyTree}}</ion-label>
+      </ion-chip>
+
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card color="light">
     <ion-card-header>
       <img src="https://image.freepik.com/free-vector/kawaii-cactus-icon_24911-45307.jpg"/>
       <ion-card-subtitle>Cacti</ion-card-subtitle>
-      <ion-card-title>Caring for Cacti</ion-card-title>
+      <ion-card-title>Caring for Cacti plants</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
-      <ion-button (click)="goToPage()">click to learn more</ion-button>
+      <ion-button color="dark" (click)="goToPage()">click to learn more</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

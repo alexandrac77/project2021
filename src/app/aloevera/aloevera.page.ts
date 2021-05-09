@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-aloevera',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aloevera.page.scss'],
 })
 export class AloeveraPage implements OnInit {
+  segment: string;
+  
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
+  }
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }

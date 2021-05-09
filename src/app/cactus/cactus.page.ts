@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../services/weather.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cactus',
@@ -8,41 +9,19 @@ import { WeatherService } from '../services/weather.service';
 })
 export class CactusPage implements OnInit {
 
-  weatherData:any[];
+  weather:any[];
+  main:any[];
 
   constructor(private service:WeatherService){
-
-  }
-  ngOnInit(){
-    this.service.getWeather().subscribe( (data)=> {
-      this.weatherData = data.weather;
-      console.log(this.weatherData);
-
-    } );
-   }
   }
 
-/*
-weather:any[];
-
-  constructor(private service:WeatherService){
-
-  }
+  //get data from weather api
   ngOnInit(){
     this.service.getWeather().subscribe( (data)=> {
       this.weather = data.weather;
       console.log(this.weather);
 
     } );
-   }
   }
+}
 
-
-  old
-  export class CactusPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-*/

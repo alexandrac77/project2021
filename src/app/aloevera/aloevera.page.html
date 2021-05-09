@@ -8,4 +8,88 @@
   <ion-button href="/home" color="success">
     <ion-icon name="home-outline" color="warning"></ion-icon>
   </ion-button>
+
+  <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment">
+    <ion-segment-button value="gallery">
+      <ion-label>Gallery</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="info">
+      <ion-label>Plant Information</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  
+  <div [ngSwitch]="segment">
+  <ion-card *ngSwitchCase="'gallery'">
+    <ion-card-header color="secondary">
+      <h1>Varieties of Aloe Vera Plants</h1>
+    </ion-card-header>
+   
+    <ion-card-content>
+        <br>
+        <ion-label><h2><b>aloe barbadensis miller</b></h2></ion-label>
+        <br>
+        <img height="600" width="600" src="https://lh3.googleusercontent.com/proxy/2fnrTshMm3WsxctoGhK7sPkYPr3CHsEBZLGVG95MGBYC_yrCl92P3CxjYs0e0Q0TZbSxBVpEqHJpNnZCPmLdsJHlvxgBLUaF4eRpWNfdiR_K_MVe3JQWgusbEL4wdlY"/>
+        
+        <br><br><br>
+        <ion-label><h2><b>aloe perfoliata</b></h2></ion-label>
+        <br>
+        <img height="500" width="600" src="https://static1.thethingsimages.com/wordpress/wp-content/uploads/2019/04/aloe-perfoliata.jpg?q=50&fit=crop&w=740&h=555&dpr=1.5"/>
+        
+        <br><br><br>
+        <ion-label><h2><b>aloe brevifola</b></h2></ion-label>
+        <br>
+        <img height="450" width="600" src="https://www.thespruce.com/thmb/KiBJ8hcco2UNVeWpgCJsmyphHpY=/2086x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-157647470-5c5b1732c9e77c0001661ea9.jpg"/>
+        
+        <br><br><br>
+        <ion-label><h2><b>aloe cameronii</b></h2></ion-label>
+        <br>
+        <img height="700" width="600" src="https://s3.amazonaws.com/finegardening.s3.tauntoncloud.com/app/uploads/2018/01/23223756/aloe_cameronii_lg-main-500x500.jpg"/>
+    
+        <br><br><br>
+        <ion-label><h2><b>lace aloe</b></h2></ion-label>
+        <br>
+        <img height="350" width="600" src="https://www.thespruce.com/thmb/s2hzJYWr-R5KL8Q2cBV_VIXwTTc=/2119x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-489986794-5c5b12d0c9e77c0001566524.jpg"/>
+      
+        <br><br><br>
+        <ion-label><h2><b>soap aloe</b></h2></ion-label>
+        <br>
+        <img height="350" width="600" src="https://www.thespruce.com/thmb/4oilziyMcEPiWWSG8aY5nhJridc=/2121x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-996861472-5c5db9f946e0fb000127c7f9.jpg"/>
+        <br>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngSwitchCase="'info'">
+    <ion-card-header color="secondary"> 
+      <ion-text>
+        <ion-icon name="heart"></ion-icon> How To Care for Aloe Vera Plants <ion-icon name="heart"></ion-icon>
+      </ion-text>
+      </ion-card-header>
+    <ion-card-content>
+      <ion-text color="dark">
+        Aloe Vera plants are attractive succulents that are easy to maintain and care for.<br>
+        They also have great benefits. The juice from some aloe vera plants, such as Aloe Barbadensis Miller, can be applied topically and used to heal burns.<br><br>
+        Growing an Aloe plant requires an area with bright, indirect sunlight. Artificial lighting can also be used.<br>
+        Terra-cotta pots are a great container to plant your Aloe in. This material allows for the soil to dry thourougly between waterings.<br>
+      </ion-text>
+
+      <ion-label color="danger">
+        <br><b>TIP:</b> make sure your pot has draining holes to avoid rot and wilting.<br>
+      </ion-label>
+
+      <ion-label color="dark">
+        <br><p><b>Planting</b> </p>
+        <p>Succulents like Aloe Vera require a well-draining potting mix.
+          Fill the pot roughly by a third with a well-draining potting mix.</p>
+        <p>Place your plant in the soil.</p>
+        <p>Add soil around the plant, leave about half an inch of space between soil and rim of the pot. The bottom leaves of the aloe plant should rest above the soil.</p>
+        <p>Leave plant for at least a week before watering.</p>
+        <p>Keep it in a warm place that receives bright but indirect light.</p>
+        <br>
+      <p><b>Watering</b></p>
+      <p>Allow the top third of the soil to dry out between waterings.</p>
+      <p>Watering every 2 weeks during the summer is advised.</p>
+    </ion-label>
+    </ion-card-content>
+  </ion-card>
+  </div>
 </ion-content>
