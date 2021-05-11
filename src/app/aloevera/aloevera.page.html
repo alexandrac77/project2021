@@ -1,13 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>aloevera</ion-title>
+  <ion-toolbar color="dark">
+    <ion-title color="success"><b>Aloe Vera</b></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="light">
   <ion-button href="/home" color="success">
     <ion-icon name="home-outline" color="warning"></ion-icon>
   </ion-button>
+
+  <ion-card color="dark">
+    <ion-card-header><h2>Welcome to the Aloe Vera page!</h2></ion-card-header>
+    <ion-card-content><h3>View the gallery & Read tips on growing Aloe Vera.</h3></ion-card-content>
+  </ion-card>
 
   <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment">
     <ion-segment-button value="gallery">
@@ -28,7 +33,7 @@
         <br>
         <ion-label><h2><b>aloe barbadensis miller</b></h2></ion-label>
         <br>
-        <img height="600" width="600" src="https://lh3.googleusercontent.com/proxy/2fnrTshMm3WsxctoGhK7sPkYPr3CHsEBZLGVG95MGBYC_yrCl92P3CxjYs0e0Q0TZbSxBVpEqHJpNnZCPmLdsJHlvxgBLUaF4eRpWNfdiR_K_MVe3JQWgusbEL4wdlY"/>
+        <img height="600" width="600" src="https://www.planthouseferndale.com/uploads/1/2/8/7/128777961/s995394297338809901_p162_i1_w2000.jpeg"/>
         
         <br><br><br>
         <ion-label><h2><b>aloe perfoliata</b></h2></ion-label>
@@ -66,6 +71,7 @@
       </ion-card-header>
     <ion-card-content>
       <ion-text color="dark">
+        <br>
         Aloe Vera plants are attractive succulents that are easy to maintain and care for.<br>
         They also have great benefits. The juice from some aloe vera plants, such as Aloe Barbadensis Miller, can be applied topically and used to heal burns.<br><br>
         Growing an Aloe plant requires an area with bright, indirect sunlight. Artificial lighting can also be used.<br>
@@ -78,16 +84,16 @@
 
       <ion-label color="dark">
         <br><p><b>Planting</b> </p>
-        <p>Succulents like Aloe Vera require a well-draining potting mix.
+        <p>- Succulents like Aloe Vera require a well-draining potting mix.
           Fill the pot roughly by a third with a well-draining potting mix.</p>
-        <p>Place your plant in the soil.</p>
-        <p>Add soil around the plant, leave about half an inch of space between soil and rim of the pot. The bottom leaves of the aloe plant should rest above the soil.</p>
-        <p>Leave plant for at least a week before watering.</p>
-        <p>Keep it in a warm place that receives bright but indirect light.</p>
+        <p>- Place your plant in the soil.</p>
+        <p>- Add soil around the plant, leave about half an inch of space between soil and rim of the pot. The bottom leaves of the aloe plant should rest above the soil.</p>
+        <p>- Leave plant for at least a week before watering.</p>
+        <p>- Keep it in a warm place that receives bright but indirect light.</p>
         <br>
       <p><b>Watering</b></p>
-      <p>Allow the top third of the soil to dry out between waterings.</p>
-      <p>Watering every 2 weeks during the summer is advised.</p>
+      <p>- Allow the top third of the soil to dry out between waterings.</p>
+      <p>- Watering every 2 weeks during the summer is advised.</p>
     </ion-label>
     </ion-card-content>
   </ion-card>

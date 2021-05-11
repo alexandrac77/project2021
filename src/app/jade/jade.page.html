@@ -1,15 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>jade</ion-title>
+  <ion-toolbar color="dark">
+    <ion-title color="success"><b>Jade Plants</b></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="light">
   <ion-button href="/home" color="success">
     <ion-icon name="home-outline" color="warning"></ion-icon>
   </ion-button>
 
   <br>
+  <ion-card color="dark">
   <ion-title color="warning">current wealth is {{moneyTree}}</ion-title>
   <ion-list>
   <ion-radio-group [(ngModel)]="moneyTree">
@@ -24,51 +25,52 @@
   </ion-radio-group>
   </ion-list>
   <ion-button color="success" expand="full" (click)="saveStatus()">Collect Wealth</ion-button>
+</ion-card>
 
   <br>
   <br>
+  <p><i>Crassula ovata: commonly known as jade plant, lucky plant, money plant or money tree.</i></p>
   <img height="270" width="500" src="https://www.trees.com/wp-content/uploads/2018/05/jade-plant.jpg"/>
   <br>
   <br>
 
   <ion-card>
-    <ion-card-header color="primary">
+    <ion-card-header color="secondary">
       <ion-icon name="bug"></ion-icon> Jade Plant Information <ion-icon name="bug"></ion-icon>
     </ion-card-header>
 
     <ion-card-content color="dark">
     <ion-label color="dark">
     <br>
-    <p><i>Crassula ovata: commonly known as jade plant, lucky plant, money plant or money tree.</i></p>
     <br>
      <p><b>Growing Jade Plants</b></p> 
      <p>Jade Plants grow best in bright light, indoors.</p> 
      <p>Plant jade in Cactus, Palm & Citrus Potting Mix.</p>
      <p>Water your plant when the top 2 inches of soil are dry.</p>
-     <p> Prune off dead or shriveled branches. You can prune your jade plant into a shape. </p>
+     <p>Prune off dead or shriveled branches. You can prune your jade plant into a shape. </p>
      <br>
      <br> 
      </ion-label>
       
      <ion-label color="danger">
-     <p>TIP: for more jade plants, break off pieces of your plant and stick them in soil so they can form roots. they are easy to propagate.</p>
+     <p><b>TIP:</b> for more jade plants, break off pieces of your plant and stick them in soil so they can form roots. they are easy to propagate.</p>
 
-     <p>TIP: blisters on the leaves means the plant is getting too much water.</p> 
+     <p><b>TIP:</b> blisters on the leaves means the plant is getting too much water.</p> 
     </ion-label>
 
     <ion-label color="dark">
      <br>
-     <p>How to plant:</p> 
+     <p><b>How to Plant:</b></p> 
 
-      <p>Choose a container with one or more drainage hole(s) </p>
+      <p>- Choose a container with one or more drainage hole(s) </p>
 
-      <p>Fill the container half-way with Potting Mix</p>
+      <p>- Fill the container half-way with Potting Mix</p>
 
-      <p>Place the plant in the pot so that top of the root ball is about an inch below the rim of the container, leave room for watering.</p>
+      <p>- Place the plant in the pot so that top of the root ball is about an inch below the rim of the container, leave room for watering.</p>
 
-      <p>Fill in around the root with more potting mix. pat gently.</p>
+      <p>- Fill in around the root with more potting mix. pat gently.</p>
 
-      <p>Water your jade plant and let it drain.</p>
+      <p>- Water your jade plant and let it drain.</p>
       </ion-label>
     </ion-card-content>
   </ion-card>
